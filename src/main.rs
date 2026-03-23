@@ -47,7 +47,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .collect::<Vec<String>>();
 
     let idx = Select::with_theme(&ColorfulTheme::default())
-        .with_prompt("Pick a channel")
+        .with_prompt("Pick a channel to setup")
         .items(&channels)
         .interact()?;
     let channel = channels[idx].clone();
